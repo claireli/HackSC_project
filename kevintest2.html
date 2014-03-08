@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+	<script src="http://code.jquery.com/jquery-1.10.2.js"> </script>
+
 	<script language="javascript">
         function MouseRollover(MyImage) {
         MyImage.src = "images/Image1.png";
@@ -9,13 +12,47 @@
         MyImage.src = "images/Image2.png";
     }
 </script>
+
+<style>
+.container {
+	background-color: #991;
+}
+.inner {
+	color: #911;
+}
+</style>
 </head>
+
+
 <body>
-<div src = "KevinSaysHi" align = 'center'> 
+<div id = "KevinSaysHi" align = 'center'> 
 <img src="images/Image2.png" 
 onMouseOver="MouseRollover(this)" 
 onMouseOut="MouseOut(this)" />
 <br>Kevin Says Hi!
 </div>
+  <div  id = "kevin" class="container">
+  <div class="inner">Bibbity</div>
+  <div class="inner">Bobbity</div>
+  <div class="inner">Boo!</div>
+</div>
+ 
+
+ <p>
+  <button id = "1">Spawn a Potion!</button>
+  <button id = "2">Replace the text!</button>
+</p>
+
+<script>
+$( "#1" ).on( "click", function() {
+
+  var $container = $( "#kevin" ).replaceWith("<div id = 'potion'> <img src = 'images/potion.png' > </div>")
+ 
+});
+
+$( "#2" ).on( "click", function(){
+  var $container = $( "#potion" ).replaceWith("<div id = 'kevin'> <img src = 'images/potion2.png' > </div>")
+});
+</script>
 </body>
 </html>
