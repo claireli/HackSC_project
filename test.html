@@ -3,8 +3,8 @@
 <script type='text/javascript'>
 
 // movement vars
-var xpos = 100;
-var ypos = 100;
+var xpos = 10; // POSITION THE CHARACTER FROM THE BEGINNING
+var ypos = 300;
 var xspeed = 1;
 var yspeed = 0;
 var maxSpeed = 5;
@@ -12,8 +12,8 @@ var maxSpeed = 5;
 // boundary
 var minx = 0;
 var miny = 0;
-var maxx = 1300; // 10 pixels for character's width
-var maxy = 400; // 10 pixels for character's width
+var maxx = 1450; // 10 pixels for character's width
+var maxy = 600; // 10 pixels for character's width
 
 // controller vars
 var upPressed = 0;
@@ -74,10 +74,7 @@ function gameLoop()
 function keyDown(e)
 {
   var code = e.keyCode ? e.keyCode : e.which;
-  if (code == 32) // used to be 38
-    upPressed = 1;
-  if (code == 40)
-    downPressed = 1;
+
   if (code == 37)
     leftPressed = 1;
   if (code == 39)
@@ -87,14 +84,12 @@ function keyDown(e)
 function keyUp(e)
 {
   var code = e.keyCode ? e.keyCode : e.which;
-  if (code == 38)
-    upPressed = 0;
-  if (code == 40)
-    downPressed = 0;
+
   if (code == 37)
     leftPressed = 0;
   if (code == 39)
     rightPressed = 0;
+
 }
 
 </script>
@@ -108,7 +103,7 @@ function keyUp(e)
    </div>
 
    <!-- The Character -->
-   <img id='character' src='1.png' style='position:absolute;left:100;top:100;height:103;width:46;'/>
+   <img id='character' src='1.png' style='position:absolute;left:100;top:300;height:103;width:46;'/>
 
 </body>
 
