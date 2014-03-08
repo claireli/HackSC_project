@@ -54,12 +54,21 @@ function gameLoop()
   document.getElementById('character').style.left = xpos;
   document.getElementById('character').style.top = ypos;
   
-  
-  itemxpos=400;
-  itemypos=400;
+ 
+  itemypos=370;
+  var k=5;
+  var place=200;
+
   // POSITION NEW GOODIES! ^_^
-  document.getElementById('item0').style.left = itemxpos;
-  document.getElementById('item0').style.top = itemypos;
+  
+  for(var i=1; i<k; i++){
+  
+  document.getElementById('item'+i).style.left = place;
+  document.getElementById('item'+i).style.top = itemypos;
+	place=place+200;
+	//if (i==1) break;
+
+	}
 
   // change speed based on keyboard events
   if (upPressed == 1)
@@ -135,10 +144,13 @@ function keyUp(e)
    </div>
 
    <!-- The Character -->
-   <img id='character' src='1.png' style='position:absolute;left:100;top:300;height:103;width:46;'/>
+   <img id='character' src='1.png' style='position:absolute;'>
    
    <!-- The Character -->
-   <img id='item0' src='images/spell1.png' style='position:absolute;'>
+   <img id='item1' src='images/spell2.png' style='position:absolute;'>
+   <img id='item2' src='images/potion.png' style='position:absolute;'>
+   <img id='item3' src='images/3A.png' style='position:absolute;'>
+   <img id='item4' src='images/4A.png' style='position:absolute;'>
 
 </body>
 
