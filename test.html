@@ -128,10 +128,38 @@ function keyUp(e)
 
 }
 
+        function item1roll(item1) {
+        item1.src = "images/spell1.png";
+    }
+        function item1out(item1) {
+        item1.src = "images/spell2.png";
+    }
 
+	// ****
+	    function item2roll(item2) {
+        item2.src = "images/potion2.png";
+    }
+        function item2out(item2) {
+        item2.src = "images/potion.png";
+    }
+	// ****
+	
+	        function item3roll(item3) {
+        item3.src = "images/3B.png";
+    }
+        function item3out(item3) {
+        item3.src = "images/3A.png";
+    }
 
-
-
+	// ****
+	    function item4roll(item4) {
+        item4.src = "images/4B.png";
+    }
+        function item4out(item4) {
+        item4.src = "images/4A.png";
+    }
+	// ****
+	
 
 </script>
 
@@ -147,10 +175,16 @@ function keyUp(e)
    <img id='character' src='1.png' style='position:absolute;'>
    
    <!-- The Character -->
-   <img id='item1' src='images/spell2.png' style='position:absolute;'>
-   <img id='item2' src='images/potion.png' style='position:absolute;'>
-   <img id='item3' src='images/3A.png' style='position:absolute;'>
-   <img id='item4' src='images/4A.png' style='position:absolute;'>
+   <img id='item1' src='images/spell2.png' style='position:absolute;' onMouseOver='item1roll(this)' 
+onMouseOut='item1out(this)'>
+   <img id='item2' src='images/potion.png' style='position:absolute;' onMouseOver='item2roll(this)' 
+onMouseOut='item2out(this)'>
+   <img id='item3' src='images/3A.png' style='position:absolute;' onMouseOver='item3roll(this)' 
+onMouseOut='item3out(this)'>
+   <img id='item4' src='images/4A.png' style='position:absolute;' onMouseOver='item4roll(this)' 
+onMouseOut='item4out(this)'>
+   
+   
 
 </body>
 
