@@ -4,7 +4,7 @@
 
 // movement vars
 var xpos = 10; // POSITION THE CHARACTER FROM THE BEGINNING
-var ypos = 300;
+var ypos = 360;
 var xspeed = 1;
 var yspeed = 0;
 var maxSpeed = 5;
@@ -13,7 +13,7 @@ var maxSpeed = 5;
 var minx = 0;
 var miny = 0;
 var maxx = 1450; // 10 pixels for character's width
-var maxy = 600; // 10 pixels for character's width
+var maxy = 670; // 10 pixels for character's width
 
 // controller vars
 var upPressed = 0;
@@ -36,6 +36,8 @@ function slowDownY()
   if (yspeed < 0)
     yspeed = yspeed + 1;
 }
+
+
 
 function gameLoop()
 {
@@ -66,6 +68,18 @@ function gameLoop()
      slowDownY();
   if (leftPressed == 0 && rightPressed == 0)
      slowDownX();
+	 
+ // jump action
+
+  if(upPressed==0 && downPressed==1)
+	 land();
+	 
+function land()
+{
+	// BRING BACK TO LAND
+	downPressed==0;
+
+}	 
 
   // loop
   setTimeout("gameLoop()",10);
@@ -79,6 +93,8 @@ function keyDown(e)
     leftPressed = 1;
   if (code == 39)
     rightPressed = 1;
+  if (code == 32)
+	upPressed = 1;
 }
 
 function keyUp(e)
@@ -89,6 +105,9 @@ function keyUp(e)
     leftPressed = 0;
   if (code == 39)
     rightPressed = 0;
+	if (code == 32)
+	upPressed =0;
+	ypos=360;
 
 }
 
@@ -99,7 +118,7 @@ function keyUp(e)
 <body onload="gameLoop()" onkeydown="keyDown(event)" onkeyup="keyUp(event)" bgcolor='gray'>
 
    <!-- The Level -->
-   <div style='width:1500;height:500;position:absolute;left:0;top:0;background:#FFFFFF;'>
+   <div style='width:1500;height:500;position:absolute;left:0;top:0;background-image:url(sky.jpg);'>
    </div>
 
    <!-- The Character -->
