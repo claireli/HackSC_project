@@ -2,13 +2,8 @@
 <head>
 <script type='text/javascript'>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 // movement vars
-=======
->>>>>>> 27c3427ae5fa172445be455fb1e31412d0f977f2
-=======
->>>>>>> 27c3427ae5fa172445be455fb1e31412d0f977f2
+
 var xpos = 10; // POSITION THE CHARACTER FROM THE BEGINNING
 var ypos = 360;
 var xspeed = 1;
@@ -58,6 +53,13 @@ function gameLoop()
   // change actual position
   document.getElementById('character').style.left = xpos;
   document.getElementById('character').style.top = ypos;
+  
+  
+  itemxpos=400;
+  itemypos=400;
+  // POSITION NEW GOODIES! ^_^
+  document.getElementById('item0').style.left = itemxpos;
+  document.getElementById('item0').style.top = itemypos;
 
   // change speed based on keyboard events
   if (upPressed == 1)
@@ -117,11 +119,9 @@ function keyUp(e)
 
 }
 
-function place_object
 
-  // POSITION NEW GOODIES! ^_^
-  document.getElementById('character').style.left = xpos;
-  document.getElementById('character').style.top = ypos;
+
+
 
 
 </script>
@@ -136,6 +136,9 @@ function place_object
 
    <!-- The Character -->
    <img id='character' src='1.png' style='position:absolute;left:100;top:300;height:103;width:46;'/>
+   
+   <!-- The Character -->
+   <img id='item0' src='images/spell1.png' style='position:absolute;'>
 
 </body>
 
