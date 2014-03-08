@@ -2,14 +2,8 @@
 <head>
 <script type='text/javascript'>
 
-// movement vars
-<<<<<<< HEAD
-var xpos = 100;
-var ypos = 100;
-=======
 var xpos = 10; // POSITION THE CHARACTER FROM THE BEGINNING
 var ypos = 360;
->>>>>>> 606c9eef53bfaff21d7f803a55aa2546b43c4c4b
 var xspeed = 1;
 var yspeed = 0;
 var maxSpeed = 5;
@@ -17,13 +11,8 @@ var maxSpeed = 5;
 // boundary
 var minx = 0;
 var miny = 0;
-<<<<<<< HEAD
-var maxx = 1300; // 10 pixels for character's width
-var maxy = 400; // 10 pixels for character's width
-=======
 var maxx = 1450; // 10 pixels for character's width
 var maxy = 670; // 10 pixels for character's width
->>>>>>> 606c9eef53bfaff21d7f803a55aa2546b43c4c4b
 
 // controller vars
 var upPressed = 0;
@@ -106,17 +95,8 @@ function keyDown(e)
     leftPressed = 1;
   if (code == 39)
     rightPressed = 1;
-<<<<<<< HEAD
-
-  if (code == 88 && xpos == 0 && ypos == 0 )
-  {
-    document.getElementById('collect');
-  }
-
-=======
   if (code == 32)
 	upPressed = 1;
->>>>>>> 606c9eef53bfaff21d7f803a55aa2546b43c4c4b
 }
 
 function keyUp(e)
@@ -130,13 +110,10 @@ function keyUp(e)
     leftPressed = 0;
   if (code == 39)
     rightPressed = 0;
-<<<<<<< HEAD
-=======
 	if (code == 32)
 	upPressed =0;
 	ypos=360;
 
->>>>>>> 606c9eef53bfaff21d7f803a55aa2546b43c4c4b
 }
 
 </script>
