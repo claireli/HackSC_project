@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script language="javascript">
+        function MouseRollover(MyImage) {
+        MyImage.src = "images/Image1.png";
+    }
+        function MouseOut(MyImage) {
+        MyImage.src = "images/Image2.png";
+    }
+</script>
+</head>
+<body>
+<div src = "KevinSaysHi" align = 'center'> 
+<img src="images/Image2.png" 
+onMouseOver="MouseRollover(this)" 
+onMouseOut="MouseOut(this)" />
+<br>Kevin Says Hi!
+</div>
+</body>
+</html>
