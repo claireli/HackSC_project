@@ -6,7 +6,7 @@
 <script>
 
 var xpos = 10; // POSITION THE CHARACTER FROM THE BEGINNING
-var ypos = 360;
+var ypos = 355;
 var xspeed = 1;
 var yspeed = 0;
 var maxSpeed = 5;
@@ -24,6 +24,10 @@ var leftPressed = 0;
 var rightPressed = 0;
 
 var collect = 0;
+var relic1=0;
+var relic2=0;
+var relic3=0;
+var relic4=0;
 
 function slowDownX()
 {
@@ -111,7 +115,7 @@ function land()
 function keyDown(e)
 {
   var code = e.keyCode ? e.keyCode : e.which;
-  if ( ypos == 355 && code == 32){ // used to be 38
+  if ( (ypos == 355 || ypos == 354) && code == 32){ // used to be 38
     upPressed = 1;
   }
   // if (code == 40 && ypos <= 355){
@@ -123,15 +127,36 @@ function keyDown(e)
     leftPressed = 1;
   if (code == 39)
     rightPressed = 1;
-  if (code == 88) // Add in position later
+  if (code == 88) //hard coded position of items added
   {
-    if (xpos <= 250 && xpos >= 100)
+    if (xpos > 190 && xpos < 220)
     {
-      console.log("Hello There");
       console.log(xpos);
       console.log(ypos);
-      collect = 1;
+      relic1=1;
+      console.log(relic1);
     }
+    if (xpos > 390 && xpos < 420)
+    {
+      console.log(xpos);
+      console.log(ypos);
+      relic2=1;
+      console.log(relic2);
+    }
+    if(xpos > 590 && xpos < 620)
+    {
+      console.log(xpos);
+      console.log(ypos);
+      relic3=1;
+      console.log(relic3);
+    }
+   if(xpos > 790 && xpos < 820)
+   {
+      console.log(xpos);
+      console.log(ypos);
+      relic4=1;
+      console.log(relic4);
+   }
   }
   
 }
@@ -152,16 +177,7 @@ function keyUp(e)
   if (code == 32){
     upPressed = 0;
   }
-  if(xpos > 10){
-    ypos=ypos-5;
-    console.log("helooo??");
-  }
-  
-  if(xpos > 200 && xpos < 400){
-  console.log("poop");
-  collect=14;
-  console.log(collect);
-  }
+
 }
 
 
@@ -212,16 +228,12 @@ function keyUp(e)
 	});
   
   
-  
-	window.onload = function() {
-
-
-
-
-	// window.onload = 
   function loadInventory() {
-    if(collect==14){
-      document.getElementById("inventory").innerHTML="TRANSFORM!!";
+    if(relic1==1){
+      document.getElementById("inventory2").innerHTML="Stored one item in inventory!! ";
+    }
+	if(relic2==1){
+      document.getElementById("inventory2").innerHTML="Stored two FYCYCUUCK in inventory!! ";
     }
   setTimeout("loadInventory()",10);
   }
@@ -266,7 +278,7 @@ background-color: #FFFFFF;
 font-family: 'Bad Script', cursive;
 color: #000000;
 font-size: 20px;
-padding-top: 10px;
+padding-top: 60px;
 padding-bottom: 10px;  
 padding-right: 0px;   
 padding-left: 20px;
