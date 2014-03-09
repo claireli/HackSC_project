@@ -101,6 +101,57 @@ function gameLoop()
   //  land();
 
   // loop
+
+  if (xpos > 180 && xpos < 260) //item1
+  {
+    $(document).ready(function(){
+      $('#popup1').show();
+    });
+  }
+  else
+  {
+    $(document).ready(function(){
+      $('#popup1').hide();
+    });
+  }
+
+  if (xpos > 390 && xpos < 440) //item2
+    {
+      $(document).ready(function(){
+        $('#popup2').show();
+      });
+    }
+
+    else{
+      $(document).ready(function(){
+        $('#popup2').hide();
+      });
+    }
+
+    if(xpos > 590 && xpos < 650) //item3
+    {
+      $(document).ready(function(){
+        $('#popup3').show();
+      });
+    }
+    else{
+      $(document).ready(function(){
+        $('#popup3').hide();
+      });
+    }
+
+
+   if(xpos > 790 && xpos < 840) //item4
+   {
+      $(document).ready(function(){
+        $('#popup4').show();
+      });
+   }
+   else{
+      $(document).ready(function(){
+        $('#popup4').hide();
+      });
+   }
   setTimeout("gameLoop()",10);
 }
 
@@ -137,10 +188,14 @@ function keyDown(e)
 document.getElementById('item1').src='images/spell1.png';
   
   }
+
+  if (code == 71){
+    console.log(xpos);
+  }
   
   if (code == 88) //hard coded position of items added
   {
-    if (xpos > 190 && xpos < 220)
+    if (xpos > 190 && xpos < 220) //item1
     {
       console.log(xpos);
       console.log(ypos);
@@ -149,21 +204,21 @@ document.getElementById('item1').src='images/spell1.png';
 	  }
 	  
     }
-    if (xpos > 390 && xpos < 420)
+    if (xpos > 390 && xpos < 420) //item2
     {
       console.log(xpos);
       console.log(ypos);
       relic2=1;
       console.log(relic2);
     }
-    if(xpos > 590 && xpos < 620)
+    if(xpos > 590 && xpos < 620) //item3
     {
       console.log(xpos);
       console.log(ypos);
       relic3=1;
       console.log(relic3);
     }
-   if(xpos > 790 && xpos < 820)
+   if(xpos > 790 && xpos < 820) //item4
    {
       console.log(xpos);
       console.log(ypos);
@@ -236,6 +291,20 @@ function keyUp(e)
 	$(document).ready(function(){
 		$('#popup1').hide();
 	});
+
+  $(document).ready(function(){
+    $('#popup2').hide();
+  });
+
+  $(document).ready(function(){
+    $('#popup3').hide();
+  });
+
+  $(document).ready(function(){
+    $('#popup4').hide();
+  });
+
+
 	
 	
 	$(document).ready(function(){
@@ -334,6 +403,75 @@ left: 170px;
 z-index: 9;
 }
 
+#popup2
+{
+width: 155px;
+height: 45px;
+border: 0px solid;
+border-radius:10px;
+align: center;
+opacity:0.8;
+filter:alpha(opacity=27); /* For IE8 and earlier */
+background-color: #FFFFFF;
+font-family: 'Calibri', cursive;
+color: #000000;
+font-size: 12px;
+padding-top: 3px;
+padding-bottom: 10px;  
+padding-right: 0px;   
+padding-left: 5px;
+position: absolute;
+top: 295px;
+left: 400px;
+z-index: 9;
+}
+
+#popup3
+{
+width: 155px;
+height: 45px;
+border: 0px solid;
+border-radius:10px;
+align: center;
+opacity:0.8;
+filter:alpha(opacity=27); /* For IE8 and earlier */
+background-color: #FFFFFF;
+font-family: 'Calibri', cursive;
+color: #000000;
+font-size: 12px;
+padding-top: 3px;
+padding-bottom: 10px;  
+padding-right: 0px;   
+padding-left: 5px;
+position: absolute;
+top: 295px;
+left: 600px;
+z-index: 9;
+}
+
+#popup4
+{
+width: 155px;
+height: 45px;
+border: 0px solid;
+border-radius:10px;
+align: center;
+opacity:0.8;
+filter:alpha(opacity=27); /* For IE8 and earlier */
+background-color: #FFFFFF;
+font-family: 'Calibri', cursive;
+color: #000000;
+font-size: 12px;
+padding-top: 3px;
+padding-bottom: 10px;  
+padding-right: 0px;   
+padding-left: 5px;
+position: absolute;
+top: 295px;
+left: 800px;
+z-index: 9;
+}
+
 </style>
 </head>
 
@@ -348,6 +486,18 @@ z-index: 9;
 	<div id="popup1">Dropped here at 12:54 PM, Sunday March 9th <br><i>by Claire Li</i>
 	&nbsp; ( O p e n )
 	</div>
+
+  <div id="popup2">Dropped here at 12:54 PM, Sunday March 9th <br><i>by Claire Li</i>
+  &nbsp; ( O p e n )
+  </div>
+
+  <div id="popup3">Dropped here at 12:54 PM, Sunday March 9th <br><i>by Claire Li</i>
+  &nbsp; ( O p e n )
+  </div>
+
+  <div id="popup4">Dropped here at 12:54 PM, Sunday March 9th <br><i>by Claire Li</i>
+  &nbsp; ( O p e n )
+  </div>
    <!-- The Character -->
    <img id='character' src='1.png' style='position:absolute;left:300;top:100;height:103;width:46;'/>
    
