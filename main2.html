@@ -5,6 +5,7 @@
 
 <script type="text/javascript" src="srcfiles/message.js"></script>
 <script type="text/javascript" src="srcfiles/date.js"></script>
+<script src="srcfiles/nextlevel.js"></script>
 
 <script src="srcfiles/buzz.js"></script>
 <script src="srcfiles/buzz.min.js"></script>
@@ -33,6 +34,8 @@ var leftPressed = 0;
 var rightPressed = 0;
 
 var collect = 0;
+
+var i = 1;
 
 function slowDownX()
 {
@@ -144,8 +147,35 @@ function keyDown(e)
 
   if (code == 38 && (xpos <= 1450 && xpos >= 1350))
   {
-    //Do something here
-    console.log("Hello Mom");
+    //Do something here int i = 1;
+    if (i < 5){
+      ++i;
+    }
+    else {
+      i = 1;
+    }
+
+    xpos = 10;
+    ypos = 360;
+    var abc = nextlevel.changeStr(i).toString();
+    console.log("A = " + abc);
+    document.body.style.backgroundImage = "url("+abc +")";
+  }
+
+  else if (code == 38 &&(xpos <=100 && xpos >= 0))
+  {
+    if (i > 1){
+      --i;
+    }
+    else{
+      i = 5;
+    }
+
+    xpos = 1450;
+    ypos = 360;
+    var abc = nextlevel.changeStr(i).toString();
+    console.log("A = " + abc);
+    document.body.style.backgroundImage = "url("+abc +")";
   }
 
   if (code == 82)
@@ -220,12 +250,13 @@ function keyUp(e)
 <body onload="land(); gameLoop();" onkeydown="keyDown(event)" onkeyup="keyUp(event)" bgcolor='gray'>
 
    <!-- The Level -->
+   
 
-   <div id = "level2" style='width:1500;height:500;position:absolute;left:0;top:0;background-image:url(images/meow.jpg);'>
+   <div id = "level2" style='width:1500;height:500;position:absolute;left:0;top:0;'>
    </div>
 
-   <div id = "mainlevel" style='width:1500;height:500;position:absolute;left:0;top:0;background-image:url(sky.jpg);'>
-   </div>
+   <!-- <div id = "mainlevel" style='background-image: url('+ abc + '); width:1500;height:500;position:absolute;left:0;top:0;'>
+   </div> -->
 
 
    <!-- The Character -->
@@ -241,6 +272,12 @@ onMouseOut='item3out(this)'>
 onMouseOut='item4out(this)'>
    
    <div id="inventory">
+
+    <script>
+   var abc = nextlevel.changeStr(i).toString();
+   console.log("A = " + abc);
+   document.body.style.backgroundImage = "url("+abc +")";
+   </script>
    
    Username's Inventory
    </div>
