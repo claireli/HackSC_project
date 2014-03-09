@@ -180,7 +180,7 @@ function keyUp(e)
     }
 	// ****
 	
-	    function item3roll(item3) {
+    function item3roll(item3) {
         item3.src = "images/3B.png";
     }
         function item3out(item3) {
@@ -193,18 +193,16 @@ function keyUp(e)
     }
         function item4out(item4) {
         item4.src = "images/4A.png";
-    }
+       }
 	// ****
   
-	window.onload = function() {
-
-
-if(collect==14){
-document.getElementById("inventory").innerHTML="TRANSFORM!!";
-}
-
-
-}
+	// window.onload = 
+  function loadInventory() {
+    if(collect==14){
+      document.getElementById("inventory").innerHTML="TRANSFORM!!";
+    }
+  setTimeout("loadInventory()",10);
+  }
 
 </script>
 <style>
@@ -234,7 +232,8 @@ z-index: 10;
 </head>
 
 
-<body onload="land(); gameLoop();" onkeydown="keyDown(event)" onkeyup="keyUp(event)" bgcolor='#FFFFF'>
+
+<body onload="land(); gameLoop(); loadInventory();" onkeydown="keyDown(event)" onkeyup="keyUp(event)" bgcolor='#FFFFF'>
 
    <!-- The Level -->
    <div style='width:1500;height:500;position:absolute;left:0;top:0;background-image:url(sky.jpg);'>
