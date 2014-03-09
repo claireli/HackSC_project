@@ -1,6 +1,7 @@
 <html>
 <head>
 <script type='text/javascript'> </script>
+<link href='http://fonts.googleapis.com/css?family=Bad+Script' rel='stylesheet' type='text/css'>
 <script src="http://code.jquery.com/jquery-1.4.4.js"> </script>
 <script>
 
@@ -196,6 +197,16 @@ function keyUp(e)
     }
 	// ****
   
+	// jQUERY INVENTORY ******
+	
+	$(document).ready(function(){
+		$("#inventory").click(function(){
+		$("p").toggle();
+		});
+	});
+  
+  
+  
 	window.onload = function() {
 
 
@@ -219,9 +230,11 @@ align: center;
 opacity:0.8;
 filter:alpha(opacity=27); /* For IE8 and earlier */
 background-color: #356680;
+font-family: 'Bad Script', cursive;
 color: #FFFFFF;
 font-size: 20px;
-padding-top: 15px;  
+padding-top: 10px;
+padding-bottom: 10px;  
 padding-right: 0px;   
 padding-left: 20px;
 position: absolute;
@@ -240,8 +253,8 @@ z-index: 10;
    <div style='width:1500;height:500;position:absolute;left:0;top:0;background-image:url(sky.jpg);'>
    </div>
 
-   <div id='inventory'> inventory(4) </div>
-
+   <div id="inventory"> inventory(4) </div>
+	<div id="inventory2">butts</div>
    <!-- The Character -->
    <img id='character' src='1.png' style='position:absolute;left:300;top:100;height:103;width:46;'/>
    
