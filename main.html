@@ -247,7 +247,7 @@ function keyUp(e)
   function loadInventory() {
     if(relic1==1){
       var k= 'document.getElementById("inventory2").innerHTML="Stored one item in inventory!! ";';
-	  document.getElementById("inventory2").innerHTML+="relic 1 ";
+	  document.getElementById("inventory2").innerHTML+="<img src='images/spell2.png'> ";
 	  relic1=0;
 	}
 	if(relic2==1){
@@ -340,11 +340,11 @@ z-index: 9;
 <body onload="land(); gameLoop(); loadInventory();" onkeydown="keyDown(event)" onkeyup="keyUp(event)" bgcolor='#FFFFF'>
 
    <!-- The Level -->
-   <div style='width:1500;height:500;position:absolute;left:0;top:0;background-image:url(sky.jpg);'>
+   <div style='width:1500;height:500;position:absolute;left:0;top:0;background-image:url(images/sky.jpg);'>
    </div>
 
    <div id="inventory"> inventory(4) </div>
-	<div id="inventory2">butts</div>
+	<div id="inventory2"></div>
 	<div id="popup1">Dropped here at 12:54 PM, Sunday March 9th <br><i>by Claire Li</i>
 	&nbsp; ( O p e n )
 	</div>
