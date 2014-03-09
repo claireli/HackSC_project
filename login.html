@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<title>Welcome to Relics</title>
+	</head>
+        <div style="margin-left:170px;"> Login to your Relics Account: <br></div>
+	<div id="loginPage">
+		<form name="login" action="login.php" method="POST">
+			<label for="name">Username:</label><input type="text" id="input" name="usr"><br>
+			<label for="password">Password:</label><input type="password" id="input" name="pw"><br><br>
+		    <label>&nbsp; </label><input type="submit" value="Submit" id="button"><br>
+		</form>
+		<form action=""> <!-- close pop up? -->
+			 <label>&nbsp; </label><input type="submit" value="Cancel" id="button" /><br>
+		</form>
+		<form action="register.html">
+			 <label>&nbsp; </label><input type="submit" value="Register now!" id="button" /><br>
+		</form>
+	</div>
+</html>
+
+<style>
+	#header{
+		width: 200px;
+		margin: 2px 4px 6px 150px;
+	}
+	#input{
+		border:2px solid #4747B2;
+		background:#D6FFD6;
+	}
+	#button{
+		border:2px solid #006;
+		background:#xffc;
+	}
+	#button:hover{
+		border: 2px solid #006;
+		padding: 2px 8px;
+		background: #xff6;
+	}
+	label{
+		display: block;
+		width: 150px;
+		float: left;
+		margin: 2px 4px;
+		text-align: right;
+	}
+</style>
