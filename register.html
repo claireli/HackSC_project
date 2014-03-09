@@ -1,8 +1,10 @@
 <html>
+	<link href='http://fonts.googleapis.com/css?family=Bad+Script' rel='stylesheet' type='text/css'>
+	<div style='width:1500;height:500;position:absolute;left:0;top:0;background-image:url(sky.jpg);'>
 	<head>
 		<title>Register for Relics</title>
 	</head>
-        <div style="margin-left:170px;"> Register for Relics! <br></div>
+        <div style="margin-left:170px;"id="head1"> Register for Relics! <br></div>
     <div id="regPage">  
 		<form action="receiveRegister.php" method="POST">
 			<label for="fName">First Name:</label><input type="text" id="input" name="fName"><br>
@@ -35,11 +37,14 @@
 		padding: 2px 8px;
 		background: #xff6
 	}
-	label{
-		display: block;
-		width: 150px;
-		float: left;
-		margin: 2px 4px;
-		text-align: right;
+	#regPage{
+		text-align: center;
 	}
+	#head1 {
+		font-family: 'bad script', serif;
+		font-size: 60px;
+		text-align: center;
+		color: #00E6CC;
+		text-shadow: 4px 4px 4px #334C95;
+		
 </style>

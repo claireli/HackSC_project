@@ -1,12 +1,14 @@
 <html>
+	<link href='http://fonts.googleapis.com/css?family=Bad+Script' rel='stylesheet' type='text/css'>
+	<div style='width:1500;height:500;position:absolute;left:0;top:0;background-image:url(sky.jpg);'>
 	<head>
 		<title>Welcome to Relics</title>
 	</head>
-        <div style="margin-left:170px;"> Login to your Relics Account: <br></div>
+        <div id="head1"style="margin-left:170px;"> Login to your Relics Account: <br></div>
 	<div id="loginPage">
 		<form name="login" action="login.php" method="POST">
-			<label for="name">Username:</label><input type="text" id="input" name="usr"><br>
-			<label for="password">Password:</label><input type="password" id="input" name="pw"><br><br>
+			Username:<input type="text" id="input" name="usr"><br>
+			Password:<input type="password" id="input" name="pw"><br><br>
 		    <label>&nbsp; </label><input type="submit" value="Submit" id="button"><br>
 		</form>
 		<form action=""> <!-- close pop up? -->
@@ -19,6 +21,17 @@
 </html>
 
 <style>
+	#loginPage{
+		text-align: center;
+	}
+	#head1 {
+		font-family: 'bad script', serif;
+		font-size: 60px;
+		text-align: center;
+		color: #00E6CC;
+		text-shadow: 4px 4px 4px #334C95;
+		
+	}
 	#header{
 		width: 200px;
 		margin: 2px 4px 6px 150px;
@@ -35,12 +48,5 @@
 		border: 2px solid #006;
 		padding: 2px 8px;
 		background: #xff6;
-	}
-	label{
-		display: block;
-		width: 150px;
-		float: left;
-		margin: 2px 4px;
-		text-align: right;
 	}
 </style>
