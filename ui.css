@@ -1,0 +1,50 @@
+<style>
+
+#inventory
+{
+width: 445px;
+height: 35px;
+border: 0px solid;
+border-radius:5px;
+align: center;
+opacity:0.8;
+filter:alpha(opacity=27); /* For IE8 and earlier */
+background-color: #356680;
+font-family: 'Bad Script', cursive;
+color: #FFFFFF;
+font-size: 20px;
+padding-top: 10px;
+padding-bottom: 10px;  
+padding-right: 0px;   
+padding-left: 20px;
+position: absolute;
+top: -10px;
+left: 880px;
+z-index: 10;
+}
+
+#inventory2
+{
+width: 445px;
+height: 335px;
+border: 0px solid;
+border-radius:5px;
+align: center;
+opacity:0.8;
+filter:alpha(opacity=27); /* For IE8 and earlier */
+background-color: #FFFFFF;
+font-family: 'Bad Script', cursive;
+color: #000000;
+font-size: 20px;
+padding-top: 10px;
+padding-bottom: 10px;  
+padding-right: 0px;   
+padding-left: 20px;
+position: absolute;
+top: -10px;
+left: 880px;
+z-index: 9;
+}
+
+
+</style>
