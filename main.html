@@ -106,12 +106,14 @@ function gameLoop()
   {
     $(document).ready(function(){
       $('#popup1').show();
+	  $('#popup1B').show();
     });
   }
   else
   {
     $(document).ready(function(){
       $('#popup1').hide();
+	  $('#popup1B').hide();
     });
   }
 
@@ -119,12 +121,14 @@ function gameLoop()
     {
       $(document).ready(function(){
         $('#popup2').show();
+		$('#popup2B').show();
       });
     }
 
     else{
       $(document).ready(function(){
         $('#popup2').hide();
+		$('#popup2B').hide();
       });
     }
 
@@ -132,11 +136,13 @@ function gameLoop()
     {
       $(document).ready(function(){
         $('#popup3').show();
+		$('#popup3B').show();
       });
     }
     else{
       $(document).ready(function(){
         $('#popup3').hide();
+		$('#popup3B').hide();
       });
     }
 
@@ -145,11 +151,13 @@ function gameLoop()
    {
       $(document).ready(function(){
         $('#popup4').show();
+		$('#popup4B').show();
       });
    }
    else{
       $(document).ready(function(){
         $('#popup4').hide();
+		$('#popup4B').hide();
       });
    }
   setTimeout("gameLoop()",10);
@@ -305,6 +313,16 @@ function keyUp(e)
   });
 
 
+$(document).ready(function(){
+$('#popup1B').hide();
+});
+
+	$(document).ready(function(){
+		$("#open").click(function(){
+		$("#popup1B").toggle();
+		});
+	});
+
 	
 	
 	$(document).ready(function(){
@@ -320,7 +338,7 @@ function keyUp(e)
 	  relic1=0;
 	}
 	if(relic2==1){
-      document.getElementById("inventory2").innerHTML+="Stored two FYCYCUUCK in inventory!! ";
+      document.getElementById("inventory2").innerHTML+="<img src='images/potion2.png' ";
       relic2=0;
 	}
   
@@ -333,6 +351,20 @@ function keyUp(e)
 
 </script>
 <style>
+
+audio { width: 48px; 
+margin-right: 20px;
+}
+
+object { width: 48px;
+margin-right: 200px;
+}
+
+embed { width: 48px;
+height: 48px;
+margin-left: 200px;
+}
+
 
 #inventory
 {
@@ -403,6 +435,30 @@ left: 170px;
 z-index: 9;
 }
 
+#popup1B
+{
+width: 240px;
+height: 90px;
+border: 0px solid;
+border-radius:10px;
+align: center;
+opacity:0.8;
+filter:alpha(opacity=27); /* For IE8 and earlier */
+background-color: #FFFFFF;
+font-family: 'Calibri', cursive;
+color: #000000;
+font-size: 12px;
+padding-top: 3px;
+padding-bottom: 10px;  
+padding-right: 0px;   
+padding-left: 5px;
+position: absolute;
+top: 180px;
+left: 170px;
+z-index: 9;
+}
+
+
 #popup2
 {
 width: 155px;
@@ -422,6 +478,29 @@ padding-right: 0px;
 padding-left: 5px;
 position: absolute;
 top: 295px;
+left: 400px;
+z-index: 9;
+}
+
+#popup2B
+{
+width: 240px;
+height: 150px;
+border: 0px solid;
+border-radius:10px;
+align: center;
+opacity:0.8;
+filter:alpha(opacity=27); /* For IE8 and earlier */
+background-color: #FFFFFF;
+font-family: 'Calibri', cursive;
+color: #000000;
+font-size: 12px;
+padding-top: 3px;
+padding-bottom: 10px;  
+padding-right: 0px;   
+padding-left: 5px;
+position: absolute;
+top: 120px;
 left: 400px;
 z-index: 9;
 }
@@ -448,6 +527,30 @@ top: 295px;
 left: 600px;
 z-index: 9;
 }
+
+#popup3B
+{
+width: 255px;
+height: 205px;
+border: 0px solid;
+border-radius:10px;
+align: center;
+opacity:0.8;
+filter:alpha(opacity=27); /* For IE8 and earlier */
+background-color: #FFFFFF;
+font-family: 'Calibri', cursive;
+color: #000000;
+font-size: 12px;
+padding-top: 3px;
+padding-bottom: 10px;  
+padding-right: 0px;   
+padding-left: 5px;
+position: absolute;
+top: 55px;
+left: 600px;
+z-index: 9;
+}
+
 
 #popup4
 {
@@ -481,21 +584,58 @@ z-index: 9;
    <div style='width:1500;height:500;position:absolute;left:0;top:0;background-image:url(images/sky.jpg);'>
    </div>
 
-   <div id="inventory"> inventory(4) </div>
+   <div id="inventory"> inventory </div>
 	<div id="inventory2"></div>
 	<div id="popup1">Dropped here at 12:54 PM, Sunday March 9th <br><i>by Claire Li</i>
-	&nbsp; ( O p e n )
+	&nbsp; <span id="#open">( O p e n )</span>
 	</div>
 
-  <div id="popup2">Dropped here at 12:54 PM, Sunday March 9th <br><i>by Claire Li</i>
+	<div id="popup1B">
+	
+	<table><tr><td colspan=3>
+	Relic Type: <i>melody</i><br>
+	Message: <i>Hey there! I thought you would enjoy this song. Click play!</i></td></tr>
+	<tr><td colspan=1><audio width="300" height="48" controls="controls"><source src="suga.mp3.mp3" type="audio/mpeg"/>Your browser does not support HTML5 audio. Please update your browser to view this media content.</audio>
+</td><td colspan=2>
+	
+	<i>Afternoon Parade - Suga Shikao</i></td></tr></table><br>
+	
+
+	</div>
+	
+	
+  <div id="popup2">Dropped here at 4:24 AM, Sunday March 9th <br><i>by Kevin Hsieh</i>
   &nbsp; ( O p e n )
   </div>
 
-  <div id="popup3">Dropped here at 12:54 PM, Sunday March 9th <br><i>by Claire Li</i>
+  	<div id="popup2B">
+	
+	<table><tr><td colspan=3>
+	Relic Type: <i>thoughs</i><br>
+	Message: <i>Oh boy...have you seen this article?</i></td></tr>
+	<tr>
+</td><td colspan=3>
+	
+	Preview: <a href="http://www.sciencedaily.com/releases/2014/03/140305125305.htm" border="0"><i>
+	...magnetically shielded facility specially built to house the first commercially available quantum computing processors -- devices so advanced that ...</i></a></td></tr></table><br>
+	
+
+	</div>
+  
+  
+  <div id="popup3">Dropped here at 1:24 AM, Sunday March 9th <br><i>by Kevin Chan</i>
   &nbsp; ( O p e n )
   </div>
+  
+  <div id="popup3B">
+  
+  <img src="https://31.media.tumblr.com/d82cc3d36c34ea479512e44d0cd2bcac/tumblr_inline_n26gh1vZmK1r11ql4.gif">
+  <br>
+  <i>Meow meow meow! Lolololol. See you later in Physics, I guess...</i>
+  
+  </div>
 
-  <div id="popup4">Dropped here at 12:54 PM, Sunday March 9th <br><i>by Claire Li</i>
+  <div id="popup4">Dropped here at 8:54 AM, Sunday March 9th <br><i>by Claire Li</i>
   &nbsp; ( O p e n )
   </div>
    <!-- The Character -->
